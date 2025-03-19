@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="?attr/actionBarSize">
+
 
 
     <ImageView
@@ -13,6 +15,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="?android:attr/actionBarSize"
+        android:layout_marginTop="16dp"
         android:padding="16dp"
         tools:src="@tools:sample/avatars"
         android:contentDescription="@string/a_picture_of_a_player_in_the_nba" />

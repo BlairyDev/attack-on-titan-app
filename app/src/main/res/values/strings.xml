@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ClassApp</string>
     <string name="hello_world">Hello, World!</string>
-    <string name="a_picture_of_a_player_in_the_nba">a picture of a character in rick and morty</string>
+    <string name="a_picture_of_a_player_in_the_nba">a picture of a player in the NBA</string>
     <string name="name">Name: %s</string>
     <string name="age">Age: %d</string>
     <string name="team">Team: %s</string>

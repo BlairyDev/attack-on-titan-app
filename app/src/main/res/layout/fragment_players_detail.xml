@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:id="@+id/player_image_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="16dp"
+        tools:src="@tools:sample/avatars"
+        android:contentDescription="@string/a_picture_of_a_player_in_the_nba" />
+
+
+
+    <TextView
+        android:id="@+id/player_description_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        app:layout_constraintTop_toBottomOf="@id/player_image_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:layout_marginTop="8dp"
+        />
+
+
+    <TextView
+        android:id="@+id/player_name_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="@string/name"
+        app:layout_constraintTop_toBottomOf="@id/player_description_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        android:padding="8dp"
+        />
+
+    <TextView
+        android:id="@+id/player_age_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age"
+        app:layout_constraintTop_toBottomOf="@id/player_name_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/player_team_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Team:"
+        app:layout_constraintTop_toBottomOf="@id/player_age_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/player_position_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Position:"
+        app:layout_constraintTop_toBottomOf="@id/player_team_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/player_signature_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signature:"
+        app:layout_constraintTop_toBottomOf="@id/player_position_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"/>
+
+    <TextView
+        android:id="@+id/player_brand_deals_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brand Deals:"
+        app:layout_constraintTop_toBottomOf="@id/player_signature_detail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:padding="8dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

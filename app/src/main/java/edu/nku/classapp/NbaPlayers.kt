@@ -6,7 +6,8 @@ data class NbaPlayers(
     val name: String,
     val team: String,
     val position: String,
-    val picture: Int,
+    val picture: String,
     val signatureMove: String,
     val brandDeal: String,
+    val description: String
 )

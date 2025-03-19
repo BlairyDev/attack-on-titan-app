@@ -6,6 +6,8 @@
     <string name="age">Age: %d</string>
     <string name="team">Team: %s</string>
     <string name="position">Position: %s</string>
-    <string name="signature_moves">Signature Move %s</string>
-    <string name="brand_deals">Brand Deals %s</string>
+    <string name="signature_moves">Signature Move: %s</string>
+    <string name="brand_deals">Brand Deal: %s</string>
+    <string name="description">%s</string>
+
 </resources>

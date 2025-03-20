@@ -1,15 +1,20 @@
-package edu.nku.classapp
+package edu.nku.classapp.viewmodel
 
-import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import android.R
+import android.R.attr.description
+import android.R.attr.name
+import android.util.Log.i
+import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import edu.nku.classapp.model.NbaPlayers
+import javax.inject.Inject
 import kotlin.random.Random
 
-class NbaPlayerListFragment : Fragment() {
+@HiltViewModel
+class NbaPlayersViewModel @Inject constructor(): ViewModel() {
+
+    val players = mutableListOf<NbaPlayers>()
+
 
     private val names = listOf("Stephen", "Anthony", "Lebron", "Klay", "Kyrie");
     private val lastNames = listOf("Curry", "Edwards", "James", "Thompson", "Irving");
@@ -43,37 +48,29 @@ class NbaPlayerListFragment : Fragment() {
 
     private val playerImages = listOf("2544","203507", "1628366", "201939", "201142", "1629029", "202681", "202691", "1641705", "1626164", "1628983")
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_player_list, container, false)
-
-        val players = mutableListOf<NbaPlayers>()
-        for (i in 0..30) {
-            players.add(createPlayer(i))
-        }
-
-        val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = NbaPlayersAdapter(players)
-
-        return view
+    init {
+        createPlayer()
     }
 
+    fun fillData() = players.toList()
 
-    private fun createPlayer(id: Int) = NbaPlayers(
-        age = Random.nextInt(1, 40),
-        id = id,
-        name = names.random() + " " + lastNames.random(),
-        team = teams.random(),
-        position = positions.random(),
-        picture = "https://cdn.nba.com/headshots/nba/latest/1040x760/${playerImages.random()}.png",
-        //picture = "https://rickandmortyapi.com/api/character/avatar/${Random.nextInt(1, 100)}.jpeg",
-        signatureMove = signatureMoves.random(),
-        brandDeal = brandDeals.random(),
-        description = description.random()
-    )
+    fun fetchById(id: Int) = players.first { it.id == id }
+
+    private fun createPlayer() = (0..30).map {id ->
+        players.add(
+            NbaPlayers (
+                age = Random.Default.nextInt(1, 40),
+                id = id,
+                name = names.random() + " " + lastNames.random(),
+                team = teams.random(),
+                position = positions.random(),
+                picture = "https://cdn.nba.com/headshots/nba/latest/1040x760/${playerImages.random()}.png",
+                signatureMove = signatureMoves.random(),
+                brandDeal = brandDeals.random(),
+                description = description.random()
+            )
+        )
+    }
 
 }
+

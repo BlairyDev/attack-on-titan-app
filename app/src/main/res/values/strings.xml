@@ -1,13 +1,14 @@
 <resources>
     <string name="app_name">ClassApp</string>
     <string name="hello_world">Hello, World!</string>
-    <string name="a_picture_of_a_player_in_the_nba">a picture of a player in the NBA</string>
+    <string name="a_picture_of_a_character_in_attack_on_titan">a picture of a character in Attack On Titan</string>
     <string name="name">Name: %s</string>
-    <string name="age">Age: %d</string>
-    <string name="team">Team: %s</string>
-    <string name="position">Position: %s</string>
-    <string name="signature_moves">Signature Move: %s</string>
-    <string name="brand_deals">Brand Deal: %s</string>
+    <string name="age">Age: %s</string>
+    <string name="gender">Gender: %s</string>
+    <string name="birth_place">Birth Place: %s</string>
+    <string name="residence">Residence: %s</string>
+    <string name="status">Status: %s</string>
     <string name="description">%s</string>
+    <string name="an_unknown_error_occurred">an unknown error occurred</string>
 
 </resources>

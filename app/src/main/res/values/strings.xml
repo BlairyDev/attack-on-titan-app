@@ -10,5 +10,7 @@
     <string name="status">Status: %s</string>
     <string name="description">%s</string>
     <string name="an_unknown_error_occurred">an unknown error occurred</string>
+    <string name="height">Height: %s</string>
+    <string name="occupation">Occupation: %s</string>
 
 </resources>

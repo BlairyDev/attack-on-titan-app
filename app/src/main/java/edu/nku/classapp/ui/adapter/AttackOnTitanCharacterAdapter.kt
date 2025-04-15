@@ -66,8 +66,8 @@ class AttackOnTitanCharacterAdapter(
 
     override fun onBindViewHolder(holder: AttackOnTitanCharacterViewHolder, position: Int) {
 
-        val player = attackOnTitanCharacters[position]
-        holder.bind(player)
+        val character = attackOnTitanCharacters[position]
+        holder.bind(character)
 
 
     }

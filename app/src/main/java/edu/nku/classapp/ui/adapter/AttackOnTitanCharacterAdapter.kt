@@ -32,8 +32,6 @@ class AttackOnTitanCharacterAdapter(
             binding.characterAge.text = binding.root.context.getString(R.string.age, character.age)
             binding.characterGender.text = binding.root.context.getString(R.string.gender, character.gender)
             binding.characterResidence.text = binding.root.context.getString(R.string.residence, character.residence)
-            //binding.characterBirthPlace.text = binding.root.context.getString(R.string.birth_place, character.birthplace)
-            //binding.characterStatus.text = binding.root.context.getString(R.string.status, character.status)
 
         }
 

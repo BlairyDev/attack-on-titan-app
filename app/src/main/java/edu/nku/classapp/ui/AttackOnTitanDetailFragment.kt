@@ -49,11 +49,9 @@ class AttackOnTitanDetailFragment : Fragment(){
                         AttackOnTitanDetailViewModel.AttackOnTitanDetailState.Failure -> {
                             binding.errorMessage.isVisible = true
                             binding.progressBar.isVisible = false
-                            //binding.recyclerView.isVisible = false
                         }
                         AttackOnTitanDetailViewModel.AttackOnTitanDetailState.Loading -> {
                             binding.progressBar.isVisible = true
-//                        binding.recyclerView.isVisible = false
                             binding.errorMessage.isVisible = false
                         }
                         is AttackOnTitanDetailViewModel.AttackOnTitanDetailState.Success -> {
@@ -65,7 +63,6 @@ class AttackOnTitanDetailFragment : Fragment(){
                             binding.characterHeightDetail.text = binding.root.context.getString(R.string.height, event.character.height)
                             binding.characterOccupationDetail.text = binding.root.context.getString(R.string.occupation, event.character.occupation)
 
-                            //binding.recyclerView.isVisible = true
                             binding.progressBar.isVisible = false
                             binding.errorMessage.isVisible = false
                         }

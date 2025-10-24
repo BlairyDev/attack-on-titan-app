@@ -1,5 +1,5 @@
 # Attack On Titan Detail App
-
+This was an assignment for CSC-415 Mobile App Development. Migrated from a Class Organization created by the professor
 # Demo Video
 
 
